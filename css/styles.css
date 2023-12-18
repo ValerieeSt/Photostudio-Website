@@ -1,0 +1,419 @@
+/* Общие стили */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+p {
+    text-indent: 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Общие стили для разделов */
+
+section {
+    padding: 40px;
+}
+
+/* Главная страница */
+
+#home {
+    text-align: center;
+    position: relative;
+}
+
+#home img {
+    width: 100%;
+    height: auto;
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* О фотостудии */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-block,
+.text-block {
+    width: 48%;
+}
+
+/* Залы */
+
+#rooms {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Оборудование */
+
+.equipment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.equipment-item {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.equipment-item:hover {
+    transform: scale(1.05);
+}
+
+.equipment-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.equipment-item:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+/* Гардероб */
+
+.wardrobe {
+    position: relative;
+    color: #fff;
+    display: flex;
+}
+
+.background-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text-block {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Форма обратной связи */
+
+#contact-form {
+    background-color: #eee;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label,
+input,
+textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Футер */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Страница оборудования */
+
+#equipment .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Страница Залов */
+
+#room-details {
+    padding: 40px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.room-description {
+    margin-bottom: 30px;
+}
+
+.room-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.room-features li {
+    margin-bottom: 10px;
+}
+
+.visit-information h3 {
+    margin-bottom: 10px;
+}
+
+.visit-information ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Слайдер Swiper */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Страница Услуг */
+
+#services {
+    text-align: center;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.service-description {
+    margin-top: 10px;
+}
+
+/* Страница Правил */
+
+#rules {
+    text-align: center;
+}
+
+.subheading {
+    margin-bottom: 40px;
+}
+
+.rule {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.rule-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.underline {
+    height: 1px;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+/* Страница Контактов */
+
+#contact-form {
+    text-align: center;
+}
+
+/* Общие стили для медиа-запросов */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo-block,
+    .text-block {
+        width: 100%;
+    }
+
+    .equipment-item {
+        width: calc(50% - 20px);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #equipment .gallery img,
+    #rooms .gallery img,
+    #room-details .swiper-slide img {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    #room-details .section-header button {
+        padding: 5px 10px;
+    }
+}

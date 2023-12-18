@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотостудия ArtLight - Правила</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Лого</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#rooms">Залы</a></li>
+                <li><a href="equipment.html">Оборудование</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="rules">
+        <h2>Правила фотостудии</h2>
+        <p class="subheading">Пожалуйста, перед посещением нашей фотостудии ознакомьтесь с правилами</p>
+
+        <div class="rule">
+            <button class="toggle-btn">+</button>
+            <h3>Название правила 1</h3>
+            <div class="rule-content">
+                <p>Описание правила 1...</p>
+            </div>
+        </div>
+        <div class="underline"></div>
+
+        <div class="rule">
+            <button class="toggle-btn">+</button>
+            <h3>Название правила 2</h3>
+            <div class="rule-content">
+                <p>Описание правила 2...</p>
+            </div>
+        </div>
+        <div class="underline"></div>
+
+        <!-- Повторите блоки "rule" по мере добавления новых правил -->
+
+    </section>
+
+    <footer>
+        <div class="icons">
+            <img src="" alt="Address">
+            <img src="" alt="Phone">
+            <img src="" alt="Email">
+            <img src="" alt="Pre-entry">
+        </div>
+        <div class="contact-info">
+            <p>Адрес: улица, город</p>
+            <p>Телефон: 123 456 789</p>
+            <p>Эл. почта: info@example.com</p>
+            <p>По предварительной записи</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ожидаем, что все элементы с классом "rule" содержат описание правила
+        var ruleElements = document.querySelectorAll('.rule');
+
+        ruleElements.forEach(function (ruleElement) {
+            var toggleBtn = ruleElement.querySelector('.toggle-btn');
+            var ruleContent = ruleElement.querySelector('.rule-content');
+
+            // Добавляем обработчик события для кнопки
+            toggleBtn.addEventListener('click', function () {
+                // Инвертируем состояние отображения описания правила
+                ruleContent.style.display = ruleContent.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
