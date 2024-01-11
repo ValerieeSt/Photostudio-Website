@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотостудия ArtLight - Гардероб в аренду</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Лого</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#rooms">Залы</a></li>
+                <li><a href="equipment.html">Оборудование</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="wardrobe-rent">
+        <h2>Гардероб в аренду</h2>
+
+        <div class="wardrobe-item">
+            <div class="item-details">
+                <h3>Название вещи 1</h3>
+                <p class="price">Цена: </p>
+                <div class="underline"></div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="wardrobe_image1.jpg" alt="Вещь 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="wardrobe_image2.jpg" alt="Вещь 1">
+                    </div>
+                   
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="wardrobe-item">
+            <div class="item-details">
+                <h3>Название вещи 2</h3>
+                <p class="price">Цена: </p>
+                <div class="underline"></div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="wardrobe_image1.jpg" alt="Вещь 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="wardrobe_image2.jpg" alt="Вещь 2">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="icons">
+            <img src="" alt="Address">
+            <img src="" alt="Phone">
+            <img src="" alt="Email">
+            <img src="" alt="Pre-entry">
+        </div>
+        <div class="contact-info">
+            <p>Адрес: улица, город</p>
+            <p>Телефон: 123 456 789</p>
+            <p>Эл. почта: info@example.com</p>
+            <p>По предварительной записи</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiperElements = document.querySelectorAll('.swiper-container');
+
+        swiperElements.forEach(function (swiperElement) {
+            var mySwiper = new Swiper(swiperElement, {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+
+</body>
+
+</html>

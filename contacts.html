@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотостудия ArtLight - Контакты</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Лого</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#rooms">Залы</a></li>
+                <li><a href="equipment.html">Оборудование</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="contacts">
+        <div class="contact_info">
+        <p>
+             Работаем круглосуточно по предварительной записи. Прием звонков пн-вс с 9.00 до 20.00 ч. Онлайн бронирование 24/7
+        </p>
+    </div>
+        <div class="contacts__items">
+          
+              <div class="contacts__icon">
+                <img src="icons/" alt="">
+              </div>
+              <div class="item-contacts">
+                <a href="tel:+375 (29) 123-32-31" class="item-getintouch__contacts">+375 (29) 123-32-31</a>
+                <a href="tel:+375 (44) 321-12-13" class="item-getintouch__contacts">+375 (44) 321-12-13</a>
+              </div>
+           
+           
+              <div class="contacts__icon">
+                <img src="icons/map_c.svg" alt="">
+              </div>
+              <div class="item-contacts">
+                <div class="item-getintouch__contacts">адрес </div>
+              </div>
+            
+              <div class="contacts__icon">
+                <img src="icons/mail_c.svg" alt="">
+              </div>
+              <div class="item-contacts">
+                <a href="mailto:inbok@retail-consult.by" class="item-getintouch__contacts">почта</a>
+                <a href="mailto:retail_consult@gmail.com" class="item-getintouch__contacts">почта</a>
+              </div>
+            </div>
+    </section>
+
+    <section id="contact-form">
+        <h2>Написать нам</h2>
+        <form>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="city">Город:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="message">Ваш запрос:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <div class="icons">
+            <img src="" alt="Address">
+            <img src="" alt="Phone">
+            <img src="" alt="Email">
+            <img src="" alt="Pre-entry">
+        </div>
+        <div class="contact-info">
+            <p>Адрес: улица, город</p>
+            <p>Телефон: 123 456 789</p>
+            <p>Эл. почта: info@example.com</p>
+            <p>По предварительной записи</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+
+</html>

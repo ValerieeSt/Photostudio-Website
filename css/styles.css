@@ -38,7 +38,7 @@ p {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -46,24 +46,25 @@ body {
 /* Шапка */
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background: #070705;
+    padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav ul {
+   
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
+nav ul li a{
+    color: #fff;
     margin-right: 20px;
-}
+}   
 
 /* Общие стили для разделов */
 
@@ -71,9 +72,11 @@ section {
     padding: 40px;
 }
 
+
 /* Главная страница */
 
 #home {
+    padding: 0;
     text-align: center;
     position: relative;
 }
@@ -84,7 +87,13 @@ section {
 }
 
 .main-text {
-    position: absolute;
+    color: #fff;
+    position:absolute;
+    text-align: right;
+   
+    font-size: large;
+    font-size: 28px;
+    padding-right: 250px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -96,9 +105,11 @@ section {
     margin-bottom: 20px;
 }
 
+
 /* О фотостудии */
 
 .about {
+    background-color: #1B1B1B;
     display: flex;
     justify-content: space-between;
     align-items: center;
