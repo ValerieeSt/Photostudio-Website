@@ -89,16 +89,21 @@ nav ul {
 }
 
 nav ul li a{
-    color: #FFF2E8;
-    margin-right: 20px;
-}   
-nav ul li a:hover{
     color: #B38867;
     margin-right: 20px;
+    font-weight: 600;
+    transition: color 0.8s ease; 
+}   
+nav ul li a:hover{
+    color: #CCB09C;
+    margin-right: 20px;
 }   
 
 
-
+nav ul li.active a {
+    border-bottom: 4px solid #B38867; 
+    padding-bottom: 26px; 
+}
 
 /* Общие стили для разделов */
 
