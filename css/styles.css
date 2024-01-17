@@ -39,20 +39,45 @@ p {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 0 ;
     padding: 0;
+    padding-top: 78.4px;
+    background-color: #1B1B1B;
 }
+
+.container{
+    padding: 0 50px;
+    background-color: #1B1B1B;
+}
+
+.text-block p{
+    margin-bottom: 40px;
+    line-height: 1.5;
+    text-indent: 0px;
+
+}
+
+
+
 
 /* Шапка */
 
 header {
-    background: #070705;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #070705be;
     padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
-
+.logo img {
+    width: 100px; 
+    height: auto;
+}
 nav ul {
    
     list-style-type: none;
@@ -62,15 +87,26 @@ nav ul {
 }
 
 nav ul li a{
-    color: #fff;
+    color: #FFF2E8;
     margin-right: 20px;
 }   
+nav ul li a:hover{
+    color: #B38867;
+    margin-right: 20px;
+}   
+
+
+
 
 /* Общие стили для разделов */
 
 section {
+    background-color: #1B1B1B;
     padding: 40px;
 }
+
+
+
 
 
 /* Главная страница */
@@ -79,6 +115,7 @@ section {
     padding: 0;
     text-align: center;
     position: relative;
+    
 }
 
 #home img {
@@ -87,7 +124,7 @@ section {
 }
 
 .main-text {
-    color: #fff;
+    color: #FFF2E8  ;
     position:absolute;
     text-align: right;
    
@@ -113,31 +150,120 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 40px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    border-bottom: 1px solid #ccc;
+
+
 }
 
 .logo-block,
 .text-block {
     width: 48%;
+    color: #FFF2E8;
+    text-indent: 0px;
+
 }
+
+.text-block h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
 
 /* Залы */
 
 #rooms {
+    background-color: #1B1B1B;
     text-align: center;
+    padding: 40px;  
+    padding-bottom: 100px;
+    border-bottom: 1px solid #ccc;
+
 }
 
-.gallery img {
+#rooms h2{
+    font-style: italic;
+    font-size: 30px;
+    color: #FFF2E8;
+    padding-bottom: 60px;
+}
+
+.room {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.room-image {
+    flex: 2;
+}
+
+.room-image img {
     width: 100%;
     height: auto;
+  
+}
+
+.room-details {
+    border: #FFF2E8;
+    flex: 2;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #1B1B1B;
+    text-align: left;
+}
+
+.room-details h3 {
+    color: #FFF2E8;
+
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.room-details p {
+    text-indent: 0px;
+    color: #FFF2E8;
     margin-bottom: 20px;
 }
+
+.room-button {
+    background-color: #1B1B1B ;
+    flex: 1;
+    padding: 40px 20px;
+    align-items: flex-end;
+}
+
+.room-button button {
+    position:absolute;
+    width: 200px;
+    font-weight: 600;
+    background-color: #B38867;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
 
 /* Оборудование */
 
 .equipment {
+    background-color: #1B1B1B;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 40px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #ccc;
+
 }
 
 .equipment-item {
@@ -148,6 +274,14 @@ section {
     padding: 15px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+}
+
+.text-block h2{
+    font-style: italic;
+    font-size: 30px;
+    color: #FFF2E8;
+    padding-bottom: 60px;   
+    
 }
 
 .equipment-item:hover {
@@ -164,27 +298,71 @@ section {
     margin-left: 0;
 }
 
+
+.text-block button {
+    position:absolute;
+    width: 200px;
+    font-weight: 600;
+    background-color: #B38867;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image-block{
+   padding-left: 200px;
+}
+
 /* Гардероб */
+
+.image-container {
+    position: relative;
+    width: 600px; 
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1.5s ease; 
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-container:hover .main-image {
+    opacity: 0; 
+}
+
+.image-container:hover .hover-image {
+    opacity: 1; 
+}
 
 .wardrobe {
     position: relative;
     color: #fff;
     display: flex;
+    padding: 40px;
+    background-color: #1B1B1B;
+    padding-bottom: 100px;
 }
 
-.background-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+.wardrobe .text-block {
+    margin-left: 50px;
 }
 
-.text-block {
-    flex: 1;
-    padding: 20px;
+.background-block img{
+    width: 90%;
 }
+
+
 
 /* Форма обратной связи */
 
@@ -218,16 +396,36 @@ button {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 60px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.icons img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.info-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-indent: 0px;
+    line-height: 1.5;
+
 }
 
 /* Страница оборудования */
