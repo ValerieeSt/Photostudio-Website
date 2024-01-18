@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотостудия ArtLight - Гардероб в аренду</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -26,53 +27,51 @@
         </nav>
     </header>
     <div class="container">
-    <section class="wardrobe-rent">
-        <h2>Гардероб в аренду</h2>
+        <section class="wardrobe-rent">
+            <h2>— Гардероб в аренду —</h2>
 
-        <div class="wardrobe-item">
-            <div class="item-details">
-                <h3>Название вещи 1</h3>
-                <p class="price">Цена: </p>
-                <div class="underline"></div>
-            </div>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="wardrobe_image1.jpg" alt="Вещь 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="wardrobe_image2.jpg" alt="Вещь 1">
-                    </div>
-                   
+            <div class="wardrobe-item">
+                <div class="wardrobe-details">
+                    <h3>ФОТОСЕССИЯ ПОД КЛЮЧ</h3>
+                    <p class="price">ЦЕНА: </p>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-
-        <div class="wardrobe-item">
-            <div class="item-details">
-                <h3>Название вещи 2</h3>
-                <p class="price">Цена: </p>
                 <div class="underline"></div>
-            </div>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="wardrobe_image1.jpg" alt="Вещь 2">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img src="image/wardrobe.png" alt="Image 1"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe2.png" alt="Image 2"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe.png" alt="Image 3"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe2.png" alt="Image 4"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="wardrobe_image2.jpg" alt="Вещь 2">
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>    
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
-        </div>
 
+            <div class="wardrobe-item">
+                <div class="wardrobe-details">
+                    <h3>ФОТОСЕССИЯ ПОД КЛЮЧ</h3>
+                    <p class="price">ЦЕНА: </p>
+                </div>
+                <div class="underline"></div>
 
-    </section>
-</div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img src="image/wardrobe.png" alt="Image 1"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe2.png" alt="Image 2"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe.png" alt="Image 3"></div>
+                        <div class="swiper-slide"> <img src="image/wardrobe2.png" alt="Image 4"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>    
+                </div>
+            </div>
+
+        </section>
+    </div>
     <footer>
         <div class="contact-info">
             <div class="info-item">
@@ -95,18 +94,18 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiperElements = document.querySelectorAll('.swiper-container');
-
-        swiperElements.forEach(function (swiperElement) {
-            var mySwiper = new Swiper(swiperElement, {
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
         });
     </script>
 

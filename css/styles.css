@@ -24,7 +24,6 @@ img {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -32,8 +31,16 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
     color: #FFF2E8; 
-}
 
+}
+h2 {
+    color: #FFF2E8; 
+    font-style: italic;
+    font-size: 30px;
+    padding-bottom: 60px;
+    align-items: center;
+    text-align: center;
+}
 p {
     color: #FFF2E8;
     text-indent: 20px;
@@ -178,8 +185,6 @@ section {
     margin-bottom: 20px;
 
 }
-
-
 
 
 
@@ -493,48 +498,49 @@ button {
     padding: 0;
 }
 
-/* Слайдер Swiper */
-
-.swiper-container {
-    width: 100%;
+/* Слайдер  */
+.wardrobe-item {
+    margin-bottom: 50px;
+}
+.swiper{
+    width: 1000px;
     height: 100%;
-    margin-top: 20px;
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
+.swiper-slide{
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #B38867;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    width: 58%;
     object-fit: cover;
 }
 
-.swiper-button-next,
 .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
+    left: 140px !important;
+    right: auto;
+    color: #ccc;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: 140px !important;
+    left: auto;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    color: #fff;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    color: #fff;
 }
 
-.swiper-button-prev {
-    left: 10px;
-}
-
-
-
-
+  
 /* Страница Услуг */
-
-
 #services h2{
     color: #FFF2E8;
     margin-bottom: 60px;
@@ -554,14 +560,14 @@ button {
     align-items: flex-start;
 }
 
-.service-details {
+.service-details, .wardrobe-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.service-details h3{
+.service-details h3, .wardrobe-details h3{
   color: #FFF2E8;
   font-size: 20px;
   
@@ -569,8 +575,9 @@ button {
 
 
 .price {
+    text-indent: 0px;
+    padding-top: 10px;
     order: 1;
-    margin-left: 10px;
     color: #FFF2E8;
     font-size: 20px;
     }
@@ -627,55 +634,13 @@ button {
     margin-bottom: 15px;
 }
 
+/* Страница аренды */
+.item-details h3{
+    font-size: 24px;
+}
+
 /* Страница Контактов */
 
 #contact-form {
     text-align: center;
-}
-
-/* Общие стили для медиа-запросов */
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .logo-block,
-    .text-block {
-        width: 100%;
-    }
-
-    .equipment-item {
-        width: calc(50% - 20px);
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    #equipment .gallery img,
-    #rooms .gallery img,
-    #room-details .swiper-slide img {
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    #room-details .section-header button {
-        padding: 5px 10px;
-    }
 }
