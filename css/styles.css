@@ -89,7 +89,6 @@ header {
 }
 nav ul {
    
-    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -615,18 +614,39 @@ button {
     cursor: pointer;
 }
 
+
+.rule h3{
+    font-size: 20px;
+}
+
+
 .toggle-btn {
+    font-size: 20px;
+    margin-bottom: -30px;
     background-color: #333;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: none;
+    border-radius: 50%;
     cursor: pointer;
 }
 
 .rule-content {
     display: none;
     margin-top: 10px;
+    padding: 20px 0;
+    
 }
+.rule-content p{
+text-indent: 0px;
+    
+}
+.rule-content li{
+    margin-left: 70px;
+   margin-top: 20px;
+   list-style-type: square; 
+}
+
 
 .underline {
     height: 3px;
