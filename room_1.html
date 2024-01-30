@@ -2,108 +2,182 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фотостудия ArtLight - Залы</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/styles.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фотостудия ArtLight - Залы</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">Лого</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li class="active"><a href="#rooms">Залы</a></li>    
-                <li><a href="equipment.html">Оборудование</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
-                <li><a href="rules.html">Правила</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="room-details">
-        <div class="section-header">
-            <h2>Наши Залы</h2>
-            <button>Забронировать</button>
+  <header>
+    <div class="logo">Лого</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li class="active"><a href="#rooms">Залы</a></li>
+        <li><a href="equipment.html">Оборудование</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
+        <li><a href="rules.html">Правила</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="room-details">
+    <div class="section-header">
+      <h2>Зал White</h2>
+    </div>
+
+    <div class="room-description">
+      <p>Описание основное в full screen...</p>
+    </div>
+
+    <div class="room-features">
+      <ul>
+        <li><strong>Зал:</strong> 120 кв. м, высота потолков 6м, панорамное остекление</li>
+        <li><strong>Цикорама:</strong> есть 4х5.5 м (ГхШ), доп. оплата за использование в случае загрязнения</li>
+        <li><strong>Цена:</strong> 2500 руб. / час (бронь от 1 часа)</li>
+        <li><strong>Интерьер:</strong> белый потолок и бетонный пол, концептуальная мебель, геометрическая конструкция, хромированный угол с металлическим столиком, ростовое зеркало</li>
+      </ul>
+    </div>
+
+    <div class="visit-information">
+      <h3>Перед визитом необходимо:</h3>
+      <ul>
+        <li>В здании фотостудии есть проходная система. Для прохода через нее нужно иметь при себе документы, необходимо сообщить администратору фотостудии заранее ФИО всей съемочной команды для оформления пропусков</li>
+        <li>До визита ознакомьтесь, пожалуйста, с правилами фотостудии на главной странице сайта</li>
+      </ul>
+    </div>
+
+    <div id="calendar"></div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/wardrobe.png" alt="Фотостудия 1">
         </div>
-
-        <div class="room-description">
-            <p>Описание основное в full screen...</p>
+        <div class="swiper-slide">
+          <img src="image/wardrobe2.png" alt="Фотостудия 2">
         </div>
-
-        <div class="room-features">
-            <ul>
-                <li><strong>Зал:</strong> 120 кв. м, высота потолков 6м, панорамное остекление</li>
-                <li><strong>Цикорама:</strong> есть 4х5.5 м (ГхШ), доп. оплата за использование в случае загрязнения</li>
-                <li><strong>Цена:</strong> 2500 руб. / час (бронь от 1 часа)</li>
-                <li><strong>Интерьер:</strong> белый потолок и бетонный пол, концептуальная мебель, геометрическая конструкция, хромированный угол с металлическим столиком, ростовое зеркало</li>
-            </ul>
+        <div class="swiper-slide">
+          <img src="studio_image3.jpg" alt="Фотостудия 3">
         </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
 
-        <div class="visit-information">
-            <h3>Перед визитом необходимо:</h3>
-            <ul>
-                <li>В здании фотостудии есть проходная система. Для прохода через нее нужно иметь при себе документы, необходимо сообщить администратору фотостудии заранее ФИО всей съемочной команды для оформления пропусков</li>
-                <li>До визита ознакомьтесь, пожалуйста, с правилами фотостудии на главной странице сайта</li>
-            </ul>
-        </div>
+  <!-- Модальное окно для бронирования -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBookingModal()">&times;</span>
+      <h2>Забронировать зал</h2>
+      <label for="date">Выберите дату:</label>
+      <input type="text" id="date" placeholder="Выберите дату" readonly="readonly" required>
+      <br>
+      <label for="time">Выберите время:</label>
+      <input type="text" id="time" placeholder="Выберите время" readonly="readonly" required>
+      <br>
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" required>
+      <br>
+      <label for="prepayment">Выберите предоплату:</label>
+      <select id="prepayment">
+        <option value="50">50%</option>
+        <option value="100">100%</option>
+      </select>
+      <br>
+      <button onclick="bookStudio()">Забронировать</button>
+    </div>
+  </div>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="studio_image1.jpg" alt="Фотостудия 1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="studio_image2.jpg" alt="Фотостудия 2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="studio_image3.jpg" alt="Фотостудия 3">
-                </div>
-        
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
+  <footer>
+    <div class="contact-info">
+      <div class="info-item">
+        <img src="icons/phone.svg" alt="Телефон">
+        <p>+375 (44) 967-75-33</br>+375 (25) 192-89-89</p>
+      </div>
+      <div class="info-item">
+        <img src="icons/map.svg" alt="Адрес">
+        <p>г. Минск, ул. Первомайская, 19
+        </p>
+      </div>
+      <div class="info-item">
+        <img src="icons/mail.svg" alt="Email">
+        <p>artlight.studio@gmail.com</p>
+      </div>
+      <div class="info-item">
+        <img src="icons/time.svg" alt="Email">
+        <p>по предварительной записи</p>
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="contact-info">
-            <div class="info-item">
-                <img src="icons/phone.svg" alt="Телефон">
-                <p>+375 (44) 967-75-33</br>+375 (25) 192-89-89</p>
-            </div>
-            <div class="info-item">
-                <img src="icons/map.svg" alt="Адрес">
-                <p>г. Минск, ул. Первомайская, 19
-                </p>
-            </div>
-            <div class="info-item">
-                <img src="icons/mail.svg" alt="Email">
-                <p>artlight.studio@gmail.com</p>
-            </div>
-            <div class="info-item">
-                <img src="icons/time.svg" alt="Email">
-                <p>по предварительной записи</p>
-            </div>
-        </div>
-    </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
+    flatpickr("#date", {
+      enableTime: false,
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d",
+      minDate: "today",
+    });
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
+    flatpickr("#time", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+    });
+
+    function openBookingModal() {
+      document.getElementById('bookingModal').style.display = 'block';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+    }
+
+    function bookStudio() {
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const name = document.getElementById('name').value;
+      const prepayment = document.getElementById('prepayment').value;
+
+      const bookingData = {
+        date: date,
+        time: time,
+        name: name,
+        prepayment: prepayment
+      };
+
+      let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+      const isAlreadyBooked = bookings.some(booking => booking.date === date && booking.time === time);
+
+      if (isAlreadyBooked) {
+        alert('Зал уже занят в выбранное время. Выберите другое время.');
+      } else {
+        bookings.push(bookingData);
+        localStorage.setItem('bookings', JSON.stringify(bookings));
+        alert('Зал успешно забронирован!');
+        closeBookingModal();
+      }
+    }
+  </script>
 
 </body>
 
