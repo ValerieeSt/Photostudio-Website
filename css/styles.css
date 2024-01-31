@@ -251,6 +251,7 @@ section {
 }
 
 .room-button button {
+    font-size: 15px;
     position:absolute;
     width: 200px;
     font-weight: 600;
@@ -262,7 +263,26 @@ section {
     border-radius: 5px;
 }
 
+.view-all-rooms-button {
+    margin-top: 20px; 
+    align-items: center;
+}
 
+
+.view-all-rooms-button button {
+    padding: 10px 20px; 
+    font-size: 15px; 
+    background-color: #B38867; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+.view-all-rooms-button button:hover {
+    background-color:  #c99d7c; 
+}
 
 
 /* Оборудование */
@@ -320,6 +340,7 @@ section {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 .image-block{
@@ -730,6 +751,7 @@ text-indent: 0px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 #contact-form button:hover {
@@ -769,7 +791,7 @@ text-indent: 0px;
 } 
 
 
-/* rooms */
+/* Страница зала */
 
 .gallery {
     display: flex;
