@@ -261,6 +261,12 @@ section {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.5s ease; 
+
+}
+.room-button button:hover {
+    background-color: #d3a684;
+
 }
 
 .view-all-rooms-button {
@@ -278,10 +284,13 @@ section {
     border-radius: 5px; 
     cursor: pointer; 
     font-weight: 600;
+    transition: background-color 0.5s ease; 
+
 }
 
 .view-all-rooms-button button:hover {
-    background-color:  #c99d7c; 
+    background-color: #d3a684;
+ 
 }
 
 
@@ -341,6 +350,14 @@ section {
     cursor: pointer;
     border-radius: 5px;
     font-size: 15px;
+    transition: background-color 0.5s ease; 
+
+
+}
+
+.text-block button:hover {
+    background-color: #d3a684;
+
 }
 
 .image-block{
@@ -737,6 +754,7 @@ text-indent: 0px;
     outline: none;
     box-sizing: border-box;
     background-color: transparent; 
+    
 }
 
 #contact-form textarea {
@@ -752,10 +770,12 @@ text-indent: 0px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
+    transition: background-color 0.5s ease; 
+
 }
 
 #contact-form button:hover {
-    background-color: #c99d7c;
+    background-color: #d3a684;
 }
 
 #contact-form button:active {
@@ -791,80 +811,201 @@ text-indent: 0px;
 } 
 
 
+
+
+
+
+
+
 /* Страница зала */
+.icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.icon-item {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-item img {
+    width: 50%;
+    margin-bottom: 10px;
+}
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-  }
 
-  .gallery-item {
+}
+
+.gallery-item {
     width: 30%;
     margin-bottom: 20px;
-  }
+}
 
-  .gallery-item img {
+.gallery-item img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-  }
+}
 
-  .gallery-item img:hover {
-    transform: scale(1.1);
-  }
+.gallery-item img:hover {
+    transform: scale(1.2);
+}
 
-  /* Стили для таблицы броней */
-  #existingBookings {
-    margin-top: 20px;
-  }
 
-  #existingBookings table {
+
+
+/* Бронирование */
+.modal-content h2{
+    margin-top: 40px;
+    margin-bottom: -50px;
+}
+
+.booking-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+.booking-form,
+.existing-bookings {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+    width: 60%; 
+}
+
+.existing-bookings {
+    width: 48%; 
+    margin-bottom: 0; 
+}
+
+.existing-bookings table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-  }
+}
 
-  #existingBookings th,
-  #existingBookings td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.existing-bookings th,
+.existing-bookings td { 
+    border: 1px solid #B38867;
+    padding: 12px; 
     text-align: left;
-  }
+    font-size: 14px; 
+    color:#FFF2E8;
+}
 
-  #existingBookings th {
-    background-color: #f2f2f2;
-  }
 
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .page-link {
-    padding: 8px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-
-  /* Стили для секции с иконками */
-  .icon-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-
-  .icon-item {
-    width: 45%;
-    text-align: center;
+.existing-bookings h3{
     margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-link {
+    color: #e0bca0;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .page-link.active {
+    background-color: #e0bca0;
+    color: #fff;
   }
 
-  .icon-item img {
-    width: 50%;
-    margin-bottom: 10px;
-  }
+
+
+
+#bookingForm {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #e0bca0;
+    color: #FFF2E8;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#bookingForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 3px solid #B38867; 
+    background: transparent;
+    font-size: 14px;
+    color: #FFF2E8; 
+}
+
+#bookingForm input[type="text"],
+#bookingForm input[type="date"],
+#bookingForm input[type="time"],
+#bookingForm select {
+    outline: none;
+}
+
+#bookingForm input[type="text"]:focus,
+#bookingForm input[type="date"]:focus,
+#bookingForm input[type="time"]:focus,
+#bookingForm select:focus {
+    border-color: #e0bca0;
+    box-shadow: 0 0 5px rgba(219, 133, 52, 0.5);
+}
+
+
+
+#bookingForm button {
+    background-color: #B38867;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;    
+    font-weight: 600;
+    transition: background-color 0.5s ease; 
+}
+
+#bookingForm button:hover {
+    background-color: #d3a684;
+    
+}
+
+
+
+
+
+
+
+
+

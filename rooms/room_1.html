@@ -7,7 +7,7 @@
   <title>Фотостудия ArtLight - Залы</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -18,13 +18,13 @@
     <div class="logo">Лого</div>
     <nav>
       <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li class="active"><a href="all_rooms.html">Залы</a></li>
-        <li><a href="equipment.html">Оборудование</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
-        <li><a href="rules.html">Правила</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="../index.html">Главная</a></li>
+        <li class="active"><a href="../all_rooms.html">Залы</a></li>
+        <li><a href="../equipment.html">Оборудование</a></li>
+        <li><a href="../services.html">Услуги</a></li>
+        <li><a href="../wardrobe_for_rent.html">Гардероб в аренду</a></li>
+        <li><a href="../rules.html">Правила</a></li>
+        <li><a href="../contacts.html">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -40,15 +40,15 @@
     <p>ИНТЕРЬЕРНАЯ CТУДИЯ ПРЕМИУМ-КЛАССА</p>
   </div>
   <div class="icon-item">
-    <img src="icons/icon2.png" alt="Иконка 2">
+    <img src="../icons/icon2.png" alt="Иконка 2">
     <p>СИСТЕМА КОНДИЦИОНИРОВАНИЯ В СТУДИИ</p>
   </div>
   <div class="icon-item">
-    <img src="icons/icon3.png" alt="Иконка 3">
+    <img src="../icons/icon3.png" alt="Иконка 3">
     <p>БЕСШОВНАЯ БЕЛАЯ ЦИКЛОРАМА</p>
   </div>
   <div class="icon-item">
-    <img src="icons/icon4.png" alt="Иконка 4">
+    <img src="../icons/icon4.png" alt="Иконка 4">
     <p>ЖУРАВЛЬ AVENGER В СТУДИИ </p>
   </div>
 </section>
@@ -77,24 +77,24 @@
 
     <div class="gallery">
       <div class="gallery-item">
-        <img src="image/wardrobe.png" alt="Фотостудия 1">
+        <img src="../image/wardrobe.png" alt="Фотостудия 1">
       </div>
       <div class="gallery-item">
-        <img src="image/wardrobe2.png" alt="Фотостудия 2">
+        <img src="../image/wardrobe2.png" alt="Фотостудия 2">
       </div>
       <div class="gallery-item">
-        <img src="image/wardrobe.png" alt="Фотостудия 3">
+        <img src="../image/wardrobe.png" alt="Фотостудия 3">
       </div>
     </div>
     <div class="gallery">
       <div class="gallery-item">
-        <img src="image/wardrobe.png" alt="Фотостудия 1">
+        <img src="../image/wardrobe.png" alt="Фотостудия 1">
       </div>
       <div class="gallery-item">
-        <img src="image/wardrobe2.png" alt="Фотостудия 2">
+        <img src="../image/wardrobe2.png" alt="Фотостудия 2">
       </div>
       <div class="gallery-item">
-      <img src="image/wardrobe.png" alt="Фотостудия 3">
+      <img src="../image/wardrobe.png" alt="Фотостудия 3">
     </div>
     </div>
   </section>
@@ -103,9 +103,11 @@
 
   <div id="bookingModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeBookingModal()">&times;</span>
       <h2>Забронировать зал</h2>
-      <form id="bookingForm">
+        <span class="close" onclick="closeBookingModal()">&times;</span>
+        <div class="booking-container">
+            <div class="booking-form">
+                <form id="bookingForm">
         <label for="date">Выберите дату:</label>
         <input type="text" id="date" placeholder="Выберите дату" readonly="readonly" required>
         <br>
@@ -124,45 +126,49 @@
           <option value="100">100%</option>
         </select>
         <br>
+        <button onclick="bookStudio()">Забронировать</button> 
       </form>
-      <button onclick="bookStudio()">Забронировать</button>
-
-      <div id="existingBookings">
-        <h3>Существующие брони:</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Дата</th>
-              <th>Время</th>
-            </tr>
-          </thead>
-          <tbody id="existingBookingsList"></tbody>
-        </table>
-
-        <div class="pagination" id="pagination">
-          <span class="page-link" onclick="prevPage()">&#9665;</span>
-          <span class="page-link" onclick="nextPage()">&#9655;</span>
-        </div>
-      </div>
-    </div>
+      
   </div>
+
+    
+  <div class="existing-bookings">
+    <h3>Существующие брони:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Время</th>
+            </tr>
+        </thead>
+        <tbody id="existingBookingsList"></tbody>
+    </table>
+
+    <div class="pagination" id="pagination">
+        <span class="page-link" onclick="prevPage()">&#9665;</span>
+        <span class="page-link" onclick="nextPage()">&#9655;</span>
+    </div>
+</div>
+</div>
+</div>
+</div>
 
   <footer>
     <div class="contact-info">
       <div class="info-item">
-        <img src="icons/phone.svg" alt="Телефон">
+        <img src="../icons/phone.svg" alt="Телефон">
         <p>+375 (44) 967-75-33</br>+375 (25) 192-89-89</p>
       </div>
       <div class="info-item">
-        <img src="icons/map.svg" alt="Адрес">
+        <img src="../icons/map.svg" alt="Адрес">
         <p>г. Минск, ул. Первомайская, 19</p>
       </div>
       <div class="info-item">
-        <img src="icons/mail.svg" alt="Email">
+        <img src="../icons/mail.svg" alt="Email">
         <p>artlight.studio@gmail.com</p>
       </div>
       <div class="info-item">
-        <img src="icons/time.svg" alt="Время работы">
+        <img src="../icons/time.svg" alt="Время работы">
         <p>по предварительной записи</p>
       </div>
     </div>
@@ -170,129 +176,10 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-  <script>
-    var mySwiper = new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-    flatpickr("#date", {
-      enableTime: false,
-      altInput: true,
-      altFormat: "F j, Y",
-      dateFormat: "Y-m-d",
-      minDate: "today",
-    });
-
-    flatpickr("#startTime, #endTime", {
-      enableTime: true,
-      noCalendar: true,
-      dateFormat: "H:i",
-    });
-
-    function openBookingModal() {
-      document.getElementById('bookingModal').style.display = 'block';
-    }
-
-    function closeBookingModal() {
-      document.getElementById('bookingModal').style.display = 'none';
-    }
-
-    function displayExistingBookings() {
-      const pageSize = 10;
-      let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-
-      const today = moment().startOf('day');
-      bookings = bookings.filter(booking => moment(booking.date).isSameOrAfter(today));
-
-      const existingBookingsList = document.getElementById('existingBookingsList');
-      existingBookingsList.innerHTML = '';
-
-      const totalPages = Math.ceil(bookings.length / pageSize);
-
-      function displayBookings(page) {
-        const start = (page - 1) * pageSize;
-        const end = start + pageSize;
-
-        bookings.slice(start, end).forEach(booking => {
-          const listItem = document.createElement('tr');
-          listItem.innerHTML = `<td>${booking.date}</td><td>${booking.startTime} - ${booking.endTime}</td>`;
-          existingBookingsList.appendChild(listItem);
-        });
-      }
-
-      displayBookings(1);
-
-      const pagination = document.getElementById('pagination');
-      pagination.innerHTML = '';
-      for (let page = 1; page <= totalPages; page++) {
-        const pageLink = document.createElement('span');
-        pageLink.classList.add('page-link');
-        pageLink.textContent = page;
-        pageLink.onclick = () => displayBookings(page);
-        pagination.appendChild(pageLink);
-      }
-    }
-
-    window.onload = function () {
-      displayExistingBookings();
-    };
-
-    function bookStudio() {
-      const date = document.getElementById('date').value;
-      const startTime = document.getElementById('startTime').value;
-      const endTime = document.getElementById('endTime').value;
-      const name = document.getElementById('name').value;
-      const prepayment = document.getElementById('prepayment').value;
-
-      const bookingData = {
-        date: date,
-        startTime: startTime,
-        endTime: endTime,
-        name: name,
-        prepayment: prepayment
-      };
-
-      let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-
-      const isAlreadyBooked = bookings.some(booking =>
-        booking.date === date &&
-        ((booking.startTime <= startTime && startTime < booking.endTime) ||
-          (booking.startTime < endTime && endTime <= booking.endTime))
-      );
-
-      const existingBookingsList = document.getElementById('existingBookingsList');
-
-      if (isAlreadyBooked) {
-        alert('Зал уже занят в выбранное время. Выберите другое время.');
-      } else {
-        bookings.push(bookingData);
-        localStorage.setItem('bookings', JSON.stringify(bookings));
-        alert('Зал успешно забронирован!');
-      }
-
-      displayExistingBookings();
-    }
-
-    function prevPage() {
-      const currentPage = document.querySelector('.page-link.active');
-      if (currentPage && currentPage.previousElementSibling) {
-        currentPage.previousElementSibling.click();
-      }
-    }
-
-    function nextPage() {
-      const currentPage = document.querySelector('.page-link.active');
-      if (currentPage && currentPage.nextElementSibling) {
-        currentPage.nextElementSibling.click();
-      }
-    }
-  </script>
-
+  <script src="js/reservation.js"></script>
+  
+  
+  
 </body>
 
 </html>
