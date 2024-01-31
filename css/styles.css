@@ -482,25 +482,38 @@ button {
 }
 
 .room-description {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
-
+.room-description p {
+    margin-bottom: 30px;
+    text-indent: 0px;
+    width: 1400px;
+}
+.room-features {
+    margin-bottom: 70px;
+}
 .room-features ul {
     list-style-type: none;
     padding: 0;
+    color: #FFF2E8;
 }
 
 .room-features li {
     margin-bottom: 10px;
 }
-
+.visit-information {
+    margin-bottom: 70px;
+    color: #FFF2E8;
+}
 .visit-information h3 {
     margin-bottom: 10px;
+    color: #FFF2E8;
 }
 
 .visit-information ul {
     list-style-type: none;
     padding: 0;
+    color: #FFF2E8;
 }
 
 /* Слайдер  */
@@ -758,3 +771,78 @@ text-indent: 0px;
 
 /* rooms */
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .gallery-item {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+
+  .gallery-item img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Стили для таблицы броней */
+  #existingBookings {
+    margin-top: 20px;
+  }
+
+  #existingBookings table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  #existingBookings th,
+  #existingBookings td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #existingBookings th {
+    background-color: #f2f2f2;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .page-link {
+    padding: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  /* Стили для секции с иконками */
+  .icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .icon-item {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .icon-item img {
+    width: 50%;
+    margin-bottom: 10px;
+  }

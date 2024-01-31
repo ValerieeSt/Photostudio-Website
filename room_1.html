@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="css/styles.css">
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 
 <body>
-
   <header>
     <div class="logo">Лого</div>
     <nav>
@@ -29,19 +31,39 @@
 
   <section id="room-details">
     <div class="section-header">
-      <h2>Зал White</h2>
+      <h2>Зал Black</h2>
     </div>
 
+<section class="icon-section">
+  <div class="icon-item">
+    <img src="icons/icon1.png" alt="Иконка 1">
+    <p>ИНТЕРЬЕРНАЯ CТУДИЯ ПРЕМИУМ-КЛАССА</p>
+  </div>
+  <div class="icon-item">
+    <img src="icons/icon2.png" alt="Иконка 2">
+    <p>СИСТЕМА КОНДИЦИОНИРОВАНИЯ В СТУДИИ</p>
+  </div>
+  <div class="icon-item">
+    <img src="icons/icon3.png" alt="Иконка 3">
+    <p>БЕСШОВНАЯ БЕЛАЯ ЦИКЛОРАМА</p>
+  </div>
+  <div class="icon-item">
+    <img src="icons/icon4.png" alt="Иконка 4">
+    <p>ЖУРАВЛЬ AVENGER В СТУДИИ </p>
+  </div>
+</section>
     <div class="room-description">
-      <p>Описание основное в full screen...</p>
+      <p>Загляните в мир таинственности и элегантности с нашим фотостудийным залом Black. Этот уникальный зал, погруженный в глубокие темные тона, привносит атмосферу стильного и элитного пространства. С выдающейся площадью в 120 квадратных метров и потрясающе высокими потолками в 6 метров, зал Black считается жемчужиной премиум-класса.</p>
+      <p> Каждый детально продуманный элемент этого зала выражает утонченность и роскошь. Панорамное остекление наполняет пространство естественным светом, создавая величественную атмосферу для вашего творчества. Цикорама размером 4x5.5 метра добавляет глубину и возможность воплощения самых смелых идей.</p>
+      <p> Бетонный пол и белый потолок создают контраст, добавляя современный шарм и подчеркивая уникальность дизайна. Эффектная концептуальная мебель, геометрическая конструкция, хромированный угол с металлическим столиком, а также ростовое зеркало дополняют облик зала, создавая удивительное визуальное восприятие.</p>
     </div>
 
     <div class="room-features">
       <ul>
-        <li><strong>Зал:</strong> 120 кв. м, высота потолков 6м, панорамное остекление</li>
-        <li><strong>Цикорама:</strong> есть 4х5.5 м (ГхШ), доп. оплата за использование в случае загрязнения</li>
-        <li><strong>Цена:</strong> 2500 руб. / час (бронь от 1 часа)</li>
-        <li><strong>Интерьер:</strong> белый потолок и бетонный пол, концептуальная мебель, геометрическая конструкция, хромированный угол с металлическим столиком, ростовое зеркало</li>
+        <li><strong>ЗАЛ:</strong>      150 кв. м, высота потолков 6м, панорамное остекление</li>
+        <li><strong>ЦИКЛОРАМА:</strong>     размером 6х6 м (ГхШ), с возможностью использования за дополнительную плату при потребности</li>
+        <li><strong>СТОИМОСТЬ:</strong>      90 руб. / час (бронь от 1 часа)</li>
+        <li><strong>ИНТЕРЬЕР:</strong>       белый потолок и бетонный пол, концептуальная мебель, геометрическая конструкция, хромированный угол с металлическим столиком, ростовое зеркало</li>
       </ul>
     </div>
 
@@ -49,50 +71,79 @@
       <h3>Перед визитом необходимо:</h3>
       <ul>
         <li>В здании фотостудии есть проходная система. Для прохода через нее нужно иметь при себе документы, необходимо сообщить администратору фотостудии заранее ФИО всей съемочной команды для оформления пропусков</li>
-        <li>До визита ознакомьтесь, пожалуйста, с правилами фотостудии на главной странице сайта</li>
+        <li>До визита ознакомьтесь, пожалуйста, с <a href="rules.html">правилами фотостудии </a></li>
       </ul>
     </div>
 
-    <div id="calendar"></div>
-
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="image/wardrobe.png" alt="Фотостудия 1">
-        </div>
-        <div class="swiper-slide">
-          <img src="image/wardrobe2.png" alt="Фотостудия 2">
-        </div>
-        <div class="swiper-slide">
-          <img src="studio_image3.jpg" alt="Фотостудия 3">
-        </div>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="image/wardrobe.png" alt="Фотостудия 1">
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="gallery-item">
+        <img src="image/wardrobe2.png" alt="Фотостудия 2">
+      </div>
+      <div class="gallery-item">
+        <img src="image/wardrobe.png" alt="Фотостудия 3">
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="image/wardrobe.png" alt="Фотостудия 1">
+      </div>
+      <div class="gallery-item">
+        <img src="image/wardrobe2.png" alt="Фотостудия 2">
+      </div>
+      <div class="gallery-item">
+      <img src="image/wardrobe.png" alt="Фотостудия 3">
+    </div>
     </div>
   </section>
 
-  <!-- Модальное окно для бронирования -->
+  
+
   <div id="bookingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeBookingModal()">&times;</span>
       <h2>Забронировать зал</h2>
-      <label for="date">Выберите дату:</label>
-      <input type="text" id="date" placeholder="Выберите дату" readonly="readonly" required>
-      <br>
-      <label for="time">Выберите время:</label>
-      <input type="text" id="time" placeholder="Выберите время" readonly="readonly" required>
-      <br>
-      <label for="name">Ваше имя:</label>
-      <input type="text" id="name" required>
-      <br>
-      <label for="prepayment">Выберите предоплату:</label>
-      <select id="prepayment">
-        <option value="50">50%</option>
-        <option value="100">100%</option>
-      </select>
-      <br>
+      <form id="bookingForm">
+        <label for="date">Выберите дату:</label>
+        <input type="text" id="date" placeholder="Выберите дату" readonly="readonly" required>
+        <br>
+        <label for="startTime">Начальное время:</label>
+        <input type="text" id="startTime" placeholder="Выберите начальное время" readonly="readonly" required>
+        <br>
+        <label for="endTime">Конечное время:</label>
+        <input type="text" id="endTime" placeholder="Выберите конечное время" readonly="readonly" required>
+        <br>
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="prepayment">Выберите предоплату:</label>
+        <select id="prepayment">
+          <option value="50">50%</option>
+          <option value="100">100%</option>
+        </select>
+        <br>
+      </form>
       <button onclick="bookStudio()">Забронировать</button>
+
+      <div id="existingBookings">
+        <h3>Существующие брони:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Время</th>
+            </tr>
+          </thead>
+          <tbody id="existingBookingsList"></tbody>
+        </table>
+
+        <div class="pagination" id="pagination">
+          <span class="page-link" onclick="prevPage()">&#9665;</span>
+          <span class="page-link" onclick="nextPage()">&#9655;</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -104,15 +155,14 @@
       </div>
       <div class="info-item">
         <img src="icons/map.svg" alt="Адрес">
-        <p>г. Минск, ул. Первомайская, 19
-        </p>
+        <p>г. Минск, ул. Первомайская, 19</p>
       </div>
       <div class="info-item">
         <img src="icons/mail.svg" alt="Email">
         <p>artlight.studio@gmail.com</p>
       </div>
       <div class="info-item">
-        <img src="icons/time.svg" alt="Email">
+        <img src="icons/time.svg" alt="Время работы">
         <p>по предварительной записи</p>
       </div>
     </div>
@@ -120,6 +170,7 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   <script>
     var mySwiper = new Swiper('.swiper-container', {
       loop: true,
@@ -137,7 +188,7 @@
       minDate: "today",
     });
 
-    flatpickr("#time", {
+    flatpickr("#startTime, #endTime", {
       enableTime: true,
       noCalendar: true,
       dateFormat: "H:i",
@@ -151,22 +202,70 @@
       document.getElementById('bookingModal').style.display = 'none';
     }
 
+    function displayExistingBookings() {
+      const pageSize = 10;
+      let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+      const today = moment().startOf('day');
+      bookings = bookings.filter(booking => moment(booking.date).isSameOrAfter(today));
+
+      const existingBookingsList = document.getElementById('existingBookingsList');
+      existingBookingsList.innerHTML = '';
+
+      const totalPages = Math.ceil(bookings.length / pageSize);
+
+      function displayBookings(page) {
+        const start = (page - 1) * pageSize;
+        const end = start + pageSize;
+
+        bookings.slice(start, end).forEach(booking => {
+          const listItem = document.createElement('tr');
+          listItem.innerHTML = `<td>${booking.date}</td><td>${booking.startTime} - ${booking.endTime}</td>`;
+          existingBookingsList.appendChild(listItem);
+        });
+      }
+
+      displayBookings(1);
+
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+      for (let page = 1; page <= totalPages; page++) {
+        const pageLink = document.createElement('span');
+        pageLink.classList.add('page-link');
+        pageLink.textContent = page;
+        pageLink.onclick = () => displayBookings(page);
+        pagination.appendChild(pageLink);
+      }
+    }
+
+    window.onload = function () {
+      displayExistingBookings();
+    };
+
     function bookStudio() {
       const date = document.getElementById('date').value;
-      const time = document.getElementById('time').value;
+      const startTime = document.getElementById('startTime').value;
+      const endTime = document.getElementById('endTime').value;
       const name = document.getElementById('name').value;
       const prepayment = document.getElementById('prepayment').value;
 
       const bookingData = {
         date: date,
-        time: time,
+        startTime: startTime,
+        endTime: endTime,
         name: name,
         prepayment: prepayment
       };
 
       let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
 
-      const isAlreadyBooked = bookings.some(booking => booking.date === date && booking.time === time);
+      const isAlreadyBooked = bookings.some(booking =>
+        booking.date === date &&
+        ((booking.startTime <= startTime && startTime < booking.endTime) ||
+          (booking.startTime < endTime && endTime <= booking.endTime))
+      );
+
+      const existingBookingsList = document.getElementById('existingBookingsList');
 
       if (isAlreadyBooked) {
         alert('Зал уже занят в выбранное время. Выберите другое время.');
@@ -174,7 +273,22 @@
         bookings.push(bookingData);
         localStorage.setItem('bookings', JSON.stringify(bookings));
         alert('Зал успешно забронирован!');
-        closeBookingModal();
+      }
+
+      displayExistingBookings();
+    }
+
+    function prevPage() {
+      const currentPage = document.querySelector('.page-link.active');
+      if (currentPage && currentPage.previousElementSibling) {
+        currentPage.previousElementSibling.click();
+      }
+    }
+
+    function nextPage() {
+      const currentPage = document.querySelector('.page-link.active');
+      if (currentPage && currentPage.nextElementSibling) {
+        currentPage.nextElementSibling.click();
       }
     }
   </script>
