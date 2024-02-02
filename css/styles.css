@@ -83,39 +83,34 @@ header {
     align-items: center;
     z-index: 1000;
 }
-
 .logo img {
     width: 100px; 
     height: auto;
     margin-left: 45px;
 }
-
 nav ul {
+   
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
+nav ul li a{
     color: #B38867;
     margin-right: 20px;
     font-weight: 600;
     transition: color 0.8s ease; 
-}
-
-nav ul li a:hover {
+}   
+nav ul li a:hover{
     color: #CCB09C;
     margin-right: 20px;
-}
+}   
+
 
 nav ul li.active a {
     border-bottom: 4px solid #B38867; 
     padding-bottom: 26px; 
-    color: #CCB09C;
+    color:#CCB09C;
 }
 
 /* Общие стили для разделов */
@@ -138,7 +133,7 @@ section {
     text-align: center;
     position: relative;
     background: url('../image/header.svg') center/cover no-repeat;
-    padding: 150px 0;
+    padding: 150px 0 200px 0;
 }
 
 .background-image {
@@ -268,6 +263,7 @@ section {
 .room-image img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
   
 }
 
@@ -349,12 +345,12 @@ section {
 .equipment {
     background-color: #232323;
     display: flex;
-    /* justify-content: space-between; */
     padding: 40px;
     padding-bottom: 100px;
     border-bottom: 1px solid #ccc;
-
-}
+    position: relative;
+    overflow: hidden; /* Добавьте эту строку */
+  }
 
 .equipment-item {
     width: calc(30% - 20px);
@@ -421,7 +417,16 @@ section {
 
 .image-block{
    padding-left: 200px;
+   opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+  
+  .image-block.animate {
+    opacity: 1;
+  transform: translateX(0);
+  }
+
 
 /* Гардероб */
 
@@ -436,6 +441,7 @@ section {
     width: 100%;
     height: 100%;
     transition: opacity 1.5s ease; 
+    border-radius: 8px;
 }
 
 .hover-image {
@@ -1070,12 +1076,5 @@ text-indent: 0px;
     background-color: #d3a684;
     
 }
-
-
-
-
-
-
-
 
 
