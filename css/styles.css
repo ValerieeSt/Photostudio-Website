@@ -51,12 +51,12 @@ body {
     margin: 0 ;
     padding: 0;
     padding-top: 78.4px;
-    background-color: #1B1B1B;
+    background-color: #232323;
 }
 
 .container{
     padding: 0 50px;
-    background-color: #1B1B1B;
+    background-color: #232323;
 }
 
 .text-block p{
@@ -77,45 +77,51 @@ header {
     left: 0;
     width: 100%;
     background-color: #070705be;
-    padding: 30px 50px;
+    padding: 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
+
 .logo img {
     width: 100px; 
     height: auto;
+    margin-left: 45px;
 }
+
 nav ul {
-   
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li a{
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
     color: #B38867;
     margin-right: 20px;
     font-weight: 600;
     transition: color 0.8s ease; 
-}   
-nav ul li a:hover{
+}
+
+nav ul li a:hover {
     color: #CCB09C;
     margin-right: 20px;
-}   
-
+}
 
 nav ul li.active a {
     border-bottom: 4px solid #B38867; 
     padding-bottom: 26px; 
-    color:#CCB09C;
+    color: #CCB09C;
 }
 
 /* Общие стили для разделов */
 
 section {
-    background-color: #1B1B1B;
+    background-color: #232323;
     padding: 40px;
 }
 
@@ -126,10 +132,22 @@ section {
 /* Главная страница */
 
 #home {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     text-align: center;
     position: relative;
-    
+    background: url('../image/header.svg') center/cover no-repeat;
+    padding: 150px 0;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 #home img {
@@ -137,30 +155,57 @@ section {
     height: auto;
 }
 
-.main-text {
-    color: #FFF2E8  ;
-    position:absolute;
-    text-align: right;
-   
-    font-size: large;
-    font-size: 28px;
-    padding-right: 250px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+.left-block,
+.right-block {
+    flex: 1;
+    box-sizing: border-box;
 }
 
-.main-text h1 {
-    font-size: 3em;
+.right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-right: 120px;
+}
+
+.main-text {
+    color: #FFF2E8;
+    font-size: 28px;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+.main-text h2 {
+    font-size: 43px;
     margin-bottom: 20px;
 }
+
+.main-text p {
+    margin-bottom: 35px;
+}
+
+.main-text h3 {
+    font-size: 25px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 /* О фотостудии */
 
 .about {
-    background-color: #1B1B1B;
+    background-color: #232323;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -180,6 +225,9 @@ section {
 
 }
 
+.logo-block{
+    width: 30%;
+}
 .text-block h1{
     font-size: 30px;
     margin-bottom: 20px;
@@ -189,10 +237,11 @@ section {
 
 
 
+
 /* Залы */
 
 #rooms {
-    background-color: #1B1B1B;
+    background-color: #232323;
     text-align: center;
     padding: 40px;  
     padding-bottom: 100px;
@@ -227,7 +276,7 @@ section {
     flex: 2;
     padding: 40px;
     box-sizing: border-box;
-    background-color: #1B1B1B;
+    background-color: #232323;
     text-align: left;
 }
 
@@ -245,7 +294,7 @@ section {
 }
 
 .room-button {
-    background-color: #1B1B1B ;
+    background-color: #232323 ;
     flex: 1;
     padding: 40px 20px;
     align-items: flex-end;
@@ -298,7 +347,7 @@ section {
 /* Оборудование */
 
 .equipment {
-    background-color: #1B1B1B;
+    background-color: #232323;
     display: flex;
     /* justify-content: space-between; */
     padding: 40px;
@@ -318,11 +367,11 @@ section {
 }
 
 .equipment-item h3{
-   color:#1B1B1B;
+   color:#232323;
 }
 
 .equipment-item p{
-    color:#1B1B1B;
+    color:#232323;
  }
 
 .text-block h2{
@@ -409,7 +458,7 @@ section {
     color: #fff;
     display: flex;
     padding: 40px;
-    background-color: #1B1B1B;
+    background-color: #232323;
     padding-bottom: 100px;
 }
 
