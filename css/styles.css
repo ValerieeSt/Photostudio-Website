@@ -58,6 +58,12 @@ body {
     padding: 0 50px;
     background-color: #232323;
 }
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px; 
+        background-color: #232323;
+    }
+}
 
 .text-block p{
     margin-bottom: 40px;
@@ -112,6 +118,52 @@ nav ul li.active a {
     padding-bottom: 26px; 
     color:#CCB09C;
 }
+
+
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #B38867;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+.burger-menu.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger-menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.active {
+        display: flex; 
+        flex-direction: column;
+        background-color: #070705be;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
 
 /* Общие стили для разделов */
 
@@ -197,6 +249,36 @@ section {
 
 
 
+
+@media only screen and (max-width: 768px) {
+    #home {
+        flex-direction: column; 
+        padding: 80px 20px; 
+    }
+
+    .background-image {
+        display: none;
+    }
+
+    .right-block {
+        margin-right: 0; 
+    }
+
+    .main-text {
+        font-size: 22px; 
+    }
+
+    .main-text h2 {
+        font-size: 35px; 
+        margin-bottom: 15px; 
+    }
+
+    .main-text h3 {
+        font-size: 20px; 
+    }
+}
+
+
 /* О фотостудии */
 
 .about {
@@ -228,7 +310,33 @@ section {
 }
 
 
+@media only screen and (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        padding: 20px; 
+        padding-bottom: 50px; 
+        padding-top: 50px;
+    }
 
+    .logo-block,
+    .text-block {
+        width: 100%; 
+        margin: 0; 
+        text-align: center;
+    }
+
+    .text-block h2 {
+        font-size: 24px; 
+    }
+
+    .text-block p {
+        font-size: 16px; 
+    }
+
+    .logo-block img {
+        max-width: 100%; 
+    }
+}
 
 
 /* Залы */
@@ -239,7 +347,6 @@ section {
     padding: 40px;  
     padding-bottom: 100px;
     border-bottom: 1px solid #ccc;
-
 }
 
 #halls h2{
@@ -259,16 +366,15 @@ section {
 }
 
 .hall-image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
-  
 }
 
 .hall-details {
     border: #FFF2E8;
     flex: 2;
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
     background-color: #232323;
     text-align: left;
@@ -276,48 +382,45 @@ section {
 
 .hall-details h3 {
     color: #FFF2E8;
-
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
 .hall-details p {
     text-indent: 0px;
     color: #FFF2E8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .hall-button {
     background-color: #232323 ;
     flex: 1;
-    padding: 40px 20px;
+    padding: 20px;
     align-items: flex-end;
 }
 
 .hall-button button {
-    font-size: 15px;
-    position:absolute;
-    width: 200px;
+    font-size: 14px;
+    width: 150px;
     font-weight: 600;
     background-color: #B38867;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.5s ease; 
-
 }
+
 .hall-button button:hover {
     background-color: #d3a684;
-
 }
 
 .view-all-halls-button {
     margin-top: 20px; 
     align-items: center;
 }
-
 
 .view-all-halls-button button {
     padding: 10px 20px; 
@@ -329,13 +432,38 @@ section {
     cursor: pointer; 
     font-weight: 600;
     transition: background-color 0.5s ease; 
-
 }
 
 .view-all-halls-button button:hover {
     background-color: #d3a684;
- 
 }
+
+
+@media only screen and (max-width: 768px) {
+    .hall-image img {
+        max-width: 80%;
+    }
+    .hall {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hall-image {
+        order: 2;
+        margin-bottom: 20px;
+    }
+    .hall-details {
+        order: 1;
+    }
+    .hall-button {
+        order: 3;
+    }
+    .hall-button button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+    
 
 
 /* Оборудование */
@@ -430,6 +558,22 @@ section {
   transform: translateX(0);
   }
 
+  @media only screen and (max-width: 768px) {
+    .equipment {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .text-block {
+      text-align: center;
+    }
+  
+    .image-block {
+      padding-left: 0;
+      margin-top: 100px;
+    }
+  }
 
 /* Гардероб */
 
@@ -479,7 +623,31 @@ section {
     width: 90%;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .image-container {
+      width: 100%;
+      height: auto;
+      
+    }
+  
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .wardrobe {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 70px;
+    }
+  
+    .wardrobe .text-block {
+      margin-left: 0;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
 
 /* Форма обратной связи */
 
@@ -557,6 +725,33 @@ footer {
     line-height: 1.5;
 
 }
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 40px 20px; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .contact-info {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .info-item {
+        padding-right: 0; 
+    }
+
+    .info-item img {
+        width: 30px; 
+        height: 30px;
+    }
+
+    .info-item p {
+        font-size: 12px; 
+    }
+}
+
+
 
 /* Страница оборудования */
 
