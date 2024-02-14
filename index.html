@@ -109,13 +109,16 @@
             <div class="hall-button">
                 <a href="halls/hall_1.html"><button>Подробнее</button></a>
             </div>
+            <div class="hall-button">
+                <a href="all_halls.html"><button>Смотреть все залы</button></a>
+            </div>
         </div>
-    
-        <div class="view-all-halls-button">
-            <a href="all_halls.html"><button>Смотреть все залы</button></a>
-        </div>
+
+       
     </section>
     
+
+
     <section class="equipment">
         <div class="text-block">
             <h2>—  Новейшее оборудование</h2>
@@ -180,6 +183,15 @@
     document.querySelector('.image-block').classList.add('animate');
     window.removeEventListener("scroll", arguments.callee); 
   }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const nav = document.querySelector('nav ul');
+
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
 });
 </script>
 </body>

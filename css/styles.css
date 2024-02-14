@@ -46,6 +46,8 @@ p {
     text-indent: 20px;
 }
 
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0 ;
@@ -75,7 +77,6 @@ body {
 
 
 
-/* Шапка */
 
 header {
     position: fixed;
@@ -89,44 +90,52 @@ header {
     align-items: center;
     z-index: 1000;
 }
+
 .logo img {
     width: 100px; 
     height: auto;
     margin-left: 45px;
 }
+
 nav ul {
-   
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li a{
-    color: #B38867;
+nav ul li {
     margin-right: 20px;
+}
+
+nav ul li a {
+    color: #B38867;
     font-weight: 600;
     transition: color 0.8s ease; 
 }   
-nav ul li a:hover{
-    color: #CCB09C;
-    margin-right: 20px;
-}   
 
+nav ul li a:hover {
+    color: #CCB09C;
+}
 
 nav ul li.active a {
     border-bottom: 4px solid #B38867; 
     padding-bottom: 26px; 
-    color:#CCB09C;
+    color: #CCB09C;
 }
-
-
-
+@media only screen and (max-width: 768px) {
+    .logo img {
+        width: 80px; 
+        margin-left: 0px; 
+    }
+}
 /* Бургер-меню */
+
 .burger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
+
 .burger-menu .line {
     width: 25px;
     height: 3px;
@@ -134,12 +143,15 @@ nav ul li.active a {
     margin: 3px 0;
     transition: all 0.3s ease;
 }
+
 .burger-menu.active .line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
+
 .burger-menu.active .line:nth-child(2) {
     opacity: 0;
 }
+
 .burger-menu.active .line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
@@ -148,9 +160,11 @@ nav ul li.active a {
     .burger-menu {
         display: flex;
     }
+    
     nav ul {
         display: none;
     }
+    
     nav ul.active {
         display: flex; 
         flex-direction: column;
@@ -171,7 +185,6 @@ section {
     background-color: #232323;
     padding: 40px;
 }
-
 
 
 
@@ -254,8 +267,10 @@ section {
     #home {
         flex-direction: column; 
         padding: 80px 20px; 
-    }
+        background: url('../image/header.svg') left/cover no-repeat;
 
+    }
+   
     .background-image {
         display: none;
     }
@@ -327,6 +342,7 @@ section {
 
     .text-block h2 {
         font-size: 24px; 
+        text-align: center;
     }
 
     .text-block p {
@@ -393,16 +409,11 @@ section {
     font-size: 14px;
 }
 
-.hall-button {
-    background-color: #232323 ;
-    flex: 1;
-    padding: 20px;
-    align-items: flex-end;
-}
+
 
 .hall-button button {
     font-size: 14px;
-    width: 150px;
+    width: 250px;
     font-weight: 600;
     background-color: #B38867;
     color: #ffffff;
@@ -418,21 +429,18 @@ section {
 }
 
 .view-all-halls-button {
-    margin-top: 20px; 
-    align-items: center;
-}
-
-.view-all-halls-button button {
-    padding: 10px 20px; 
-    font-size: 15px; 
-    background-color: #B38867; 
-    color: #ffffff; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    font-size: 14px;
+    width: 250px;
     font-weight: 600;
+    background-color: #B38867;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.5s ease; 
 }
+
 
 .view-all-halls-button button:hover {
     background-color: #d3a684;
@@ -440,8 +448,14 @@ section {
 
 
 @media only screen and (max-width: 768px) {
+    #halls {
+      
+        padding: 30px 0;  
+       
+    }
+    
     .hall-image img {
-        max-width: 80%;
+        max-width: 100%;
     }
     .hall {
         flex-direction: column;
@@ -453,14 +467,12 @@ section {
     }
     .hall-details {
         order: 1;
+        text-align: center;
     }
     .hall-button {
         order: 3;
     }
-    .hall-button button {
-        width: 100%;
-        margin-top: 10px;
-    }
+   
 }
 
     
@@ -526,16 +538,15 @@ section {
 
 
 .text-block button {
-    position:absolute;
-    width: 200px;
+    font-size: 14px;
+    width: 250px;
     font-weight: 600;
     background-color: #B38867;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 15px;
     transition: background-color 0.5s ease; 
 
 
@@ -569,11 +580,30 @@ section {
       text-align: center;
     }
   
+    .text-block h2 {
+      text-align: center; 
+      padding-bottom: 20px;
+    }
+  
+   
+  
     .image-block {
       padding-left: 0;
       margin-top: 100px;
     }
+  
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .text-block button {
+        margin: 0 auto; 
+        display: block; 
+    }
   }
+
+
 
 /* Гардероб */
 
@@ -668,13 +698,6 @@ button {
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
 
 /* Футер */
 
@@ -742,13 +765,12 @@ footer {
     }
 
     .info-item img {
-        width: 30px; 
-        height: 30px;
+        width: 40px; 
+        height: 40px;
+        margin-top: 10px;
     }
 
-    .info-item p {
-        font-size: 12px; 
-    }
+  
 }
 
 
@@ -781,13 +803,7 @@ footer {
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
+
 
 .hall-description {
     margin-bottom: 70px;
@@ -1259,14 +1275,15 @@ text-indent: 0px;
 
 #bookingForm button {
     background-color: #B38867;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    margin-top: 20px;    
+    font-size: 14px;
+    width: 250px;
     font-weight: 600;
+    background-color: #B38867;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.5s ease; 
 }
 
