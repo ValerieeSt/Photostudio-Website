@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотостудия ArtLight - Услуги</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css"> 
 </head>
 
 <body>
-
-
     <header>
         <a href="index.html">
             <div class="logo">
@@ -19,9 +16,14 @@
             </div>
         </a> 
         <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>    
-                <li><a href="all_halls.html">Залы</a></li>
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="menu-list">
+                <li ><a href="index.html">Главная</a></li>    
+                <li><a href="#halls">Залы</a></li>
                 <li><a href="equipment.html">Оборудование</a></li>
                 <li class="active"><a href="services.html">Услуги</a></li>
                 <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
@@ -29,7 +31,7 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   
 
     <div class="container">
     
@@ -205,6 +207,15 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('nav ul');
+
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+});
     </script>
 
 </body>

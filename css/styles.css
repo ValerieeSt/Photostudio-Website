@@ -128,6 +128,8 @@ nav ul li.active a {
         margin-left: 0px; 
     }
 }
+
+
 /* Бургер-меню */
 
 .burger-menu {
@@ -137,10 +139,10 @@ nav ul li.active a {
 }
 
 .burger-menu .line {
-    width: 25px;
+    width: 30px;
     height: 3px;
-    background-color: #B38867;
-    margin: 3px 0;
+    background-color: #CDB19C;
+    margin: 4px 0;
     transition: all 0.3s ease;
 }
 
@@ -157,10 +159,15 @@ nav ul li.active a {
 }
 
 @media only screen and (max-width: 768px) {
+    .logo img {
+        width: 80px; 
+        margin-left: 0px; 
+    }
+
     .burger-menu {
         display: flex;
     }
-    
+
     nav ul {
         display: none;
     }
@@ -187,14 +194,17 @@ section {
 }
 
 
-
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 20px; 
+    }
+}
 
 /* Главная страница */
 
 #home {
     display: flex;
     justify-content: space-between;
-    padding: 0;
     text-align: center;
     position: relative;
     background: url('../image/header.svg') center/cover no-repeat;
@@ -265,8 +275,8 @@ section {
 
 @media only screen and (max-width: 768px) {
     #home {
+        margin-top: -80px;
         flex-direction: column; 
-        padding: 80px 20px; 
         background: url('../image/header.svg') left/cover no-repeat;
 
     }
@@ -428,7 +438,14 @@ section {
     background-color: #d3a684;
 }
 
-.view-all-halls-button {
+
+
+.view-all-halls-button button:hover {
+    background-color: #d3a684;
+}
+
+.view-all-halls-button button{ 
+float: right;
     font-size: 14px;
     width: 250px;
     font-weight: 600;
@@ -441,10 +458,6 @@ section {
     transition: background-color 0.5s ease; 
 }
 
-
-.view-all-halls-button button:hover {
-    background-color: #d3a684;
-}
 
 
 @media only screen and (max-width: 768px) {
@@ -473,6 +486,25 @@ section {
         order: 3;
     }
    
+    .view-all-halls-button button{ 
+        float: none;
+
+        display: block; 
+        margin: 0px auto;
+        font-size: 14px;
+        width: 250px;
+        font-weight: 600;
+        background-color: #B38867;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.5s ease; 
+    
+    }
+
+
 }
 
     
@@ -742,8 +774,8 @@ footer {
 }
 
 .info-item p {
-    margin-top: 5px;
-    font-size: 14px;
+   
+    font-size: 16px;
     text-indent: 0px;
     line-height: 1.5;
 
@@ -777,17 +809,37 @@ footer {
 
 /* Страница оборудования */
 
-#equipment .gallery {
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .equipment-item {
-    
+    width: calc(33.33% - 20px); 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+    padding: 10px;
     border-bottom: 5px solid #B38867;
 }
 
+@media only screen and (max-width: 1024px) {
+    .equipment-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .equipment-item {
+        width: 100%; 
+    }
+}
 /* Страница Залов */
 
 #hall-details {
@@ -888,7 +940,39 @@ footer {
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
     color: #fff;
 }
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .swiper {
+        width: 100%;
+    }
 
+    .swiper-slide {
+        font-size: 14px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .swiper-button-prev {
+        left: 10px !important;
+    }
+
+    .swiper-button-next {
+        right: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .item-details h3 {
+        font-size: 20px;
+    }
+    
+    .wardrobe-item {
+        margin-bottom: 30px;
+    }
+
+}
   
 /* Страница Услуг */
 #services h2{
@@ -949,6 +1033,37 @@ footer {
     line-height: 1.5;
 }
 
+@media screen and (max-width: 1024px) {
+    .service-details, .wardrobe-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service {
+        padding-left: 0;
+        border-left: none;
+        margin-bottom: 50px;
+    }
+
+    .service-details, .wardrobe-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price {
+        order: 0;
+        text-align: left;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .service-description p {
+        text-indent: 0;
+        margin-top: 5px;
+    }
+}
 
 /* Страница Правил */
 
@@ -973,7 +1088,6 @@ footer {
 
 .toggle-btn {
     font-size: 20px;
-    margin-bottom: -30px;
     background-color: #333;
     color: #fff;
     padding: 10px 15px;
@@ -1003,6 +1117,50 @@ text-indent: 0px;
     height: 3px;
     background-color: #333;
     margin-bottom: 15px;
+}
+
+.toggle-btn-container {
+    display: inline-block;
+    margin-bottom: -30px;
+}
+
+.toggle-btn {
+    font-size: 20px;
+    background-color: #B38867;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rule h3 {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+    .toggle-btn-container {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column-reverse; 
+    }
+
+    .toggle-btn {
+        order: 2; 
+    }
+
+    .rule h3 {
+        order: 1; 
+    }
+
+    .rule-content li {
+        margin-left: 22px;
+        margin-top: 20px;
+        list-style-type: square; 
+    }
 }
 
 /* Страница аренды */
@@ -1103,7 +1261,35 @@ text-indent: 0px;
     color: #FFF2E8;
     font-size: 16px;
 } 
+@media only screen and (max-width: 768px) {
+    #contact-form form {
+        display: block;
+    }
 
+    #contact-form input,
+    #contact-form textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-form {
+        padding: 20px;
+    }
+
+    #contact-form button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-block {
+        margin-bottom: 20px;
+    }
+}
 
 
 

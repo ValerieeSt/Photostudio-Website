@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <header>
         <a href="index.html">
             <div class="logo">
@@ -17,9 +16,14 @@
             </div>
         </a> 
         <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>    
-                <li><a href="all_halls.html">Залы</a></li>
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="menu-list">
+                <li ><a href="index.html">Главная</a></li>    
+                <li><a href="#halls">Залы</a></li>
                 <li><a href="equipment.html">Оборудование</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="wardrobe_for_rent.html">Гардероб в аренду</a></li>
@@ -27,7 +31,7 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
 
     
     <div class="container"> 
@@ -36,8 +40,9 @@
         <p class="subheading">Пожалуйста, перед посещением нашей фотостудии ознакомьтесь с правилами</p>
 
         <div class="rule">
+            <h3>Общие правила фотостудии</h3>
             <button class="toggle-btn">+</button>
-            <h3>Общие правила поведения в фотостудии</h3>
+
             <div class="rule-content">
                 <ul style="list-style-type: square;">
                     <li style="text-align: left;      color: rgb(255, 240, 198);"> <p>Мы оставляем за собой правило не впускать в студию людей в нетрезвом состоянии;</p> </li>
@@ -55,8 +60,9 @@
         <div class="underline"></div>
 
         <div class="rule">
-            <button class="toggle-btn">+</button>
             <h3>Правила начала аренды и поведения в залах фотостудии</h3>
+            <button class="toggle-btn">+</button>
+
             <div class="rule-content">
                 <ul>
                     <li style="text-align: left;      color: rgb(255, 240, 198);">  <p>Фактическое время аренды зала составляет 55 минут. Началом аренды студии считается заявленное время, которое вы забронировали. Вход в зал возможен не раньше забронированного времени, выход СТРОГО не позже забронированного времени. </p> </li>
@@ -75,8 +81,9 @@
 
 
         <div class="rule">
-            <button class="toggle-btn">+</button>
             <h3>Вместимость залов фотостудии</h3>
+            <button class="toggle-btn">+</button>
+
             <div class="rule-content">
                 <ul>
                     <li style="text-align: left;      color: rgb(255, 240, 198);">  <p>Максимальное количество людей в зале 1 - 8 человек, в зале 2 - 10 человек, в зале 3 - 10 человек;</p> </li>
@@ -89,8 +96,9 @@
 
 
         <div class="rule">
-            <button class="toggle-btn">+</button>
             <h3>Ответственность за ущерб</h3>
+            <button class="toggle-btn">+</button>
+
             <div class="rule-content">
                 <ul>
                     <li style="text-align: left;      color: rgb(255, 240, 198);">  <p>При нанесении фотостудии материального ущерба и загрязнения арендатор обязан возместить на месте стоимость ущерба; </p> </li>
@@ -106,8 +114,9 @@
 
 
         <div class="rule">
-            <button class="toggle-btn">+</button>
             <h3>Предоплата за бронирование</h3>
+            <button class="toggle-btn">+</button>
+
             <div class="rule-content">
                 <ul>
                     <li style="text-align: left;      color: rgb(255, 240, 198);">  <p>Предоплата составляет 50%. Она должна быть внесена в течение 2 часов с момента бронирования. </p> </li>               
@@ -117,8 +126,9 @@
         <div class="underline"></div>
 
         <div class="rule">
-            <button class="toggle-btn">+</button>
             <h3>Отмена бронирования</h3>
+            <button class="toggle-btn">+</button>
+
             <div class="rule-content">
                 <ul>
                     <li style="text-align: left;      color: rgb(255, 240, 198);">  <p>Отмена брони возможна не позднее, чем за 72 часа до назначенной даты аренды в будние дни, и не менее чем за 120 часов в выходные дни. Если бронирование отменяется позже указанного времени сумма внесенной предоплаты (100% либо 50%) не возвращается.</p> </li>
@@ -166,6 +176,8 @@
             });
         });
     </script>
+    <script src="js/b_menu.js">  </script>
+
 
 </body>
 
